@@ -1,0 +1,25 @@
+/* Vendor Import*/
+@import url("https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap");
+
+//----------------------------------*\
+// SCSS MIXINS
+//----------------------------------*/
+
+@import "./_mixins/media";
+@import "./_mixins/selection";
+
+//----------------------------------*\
+// CONFIG & MODULES
+//----------------------------------*/
+
+//MODULES
+@import "./_modules/variables";
+@import "./_modules/animation";
+@import "./_modules/icon";
+@import "./_modules/typography";
+@import "./_modules/_print";
+@import "./_modules/app";
+
+// COMPONENTS
+
+//PAGES
