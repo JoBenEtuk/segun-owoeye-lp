@@ -2,7 +2,7 @@ import React from 'react'
 import { useStaticQuery, graphql } from "gatsby"
 
 const Hero = () => {
-    const query = useStaticQuery(graphql`
+  const query = useStaticQuery(graphql`
     {
       allContentfulHomePage {
         nodes {
@@ -21,17 +21,17 @@ const Hero = () => {
       }
     }
   `)
-    const data = query.allContentfulHomePage.nodes[0].introduction
+  const data = query.allContentfulHomePage.nodes[0].introduction
 
-    return (
-        <div className="home-hero" style={{ backgroundImage: `linear-gradient(rgba(10, 10, 10, 0.5) 100%, rgba(10, 10, 10, 0.5)100%), url(https:${data.backgroundImage.fluid.src})` }}>
-            <div className="container">
-                <h1>{data.title}</h1>
-                <h3>{data.description.description}</h3>
-                <button>Schedule Appointment</button>
-            </div>
-        </div>
-    )
+  return (
+    <div className="home-hero" style={{ backgroundImage: `linear-gradient(rgba(10, 10, 10, 0.5) 100%, rgba(10, 10, 10, 0.5)100%), url(https:${data.backgroundImage.fluid.src})` }}>
+      <div className="container">
+        <h1>{data.title}</h1>
+        <h3>{data.description.description}</h3>
+        <button className="btn-main">Schedule Appointment</button>
+      </div>
+    </div>
+  )
 }
 
 export default Hero
