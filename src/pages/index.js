@@ -1,10 +1,11 @@
 import * as React from "react"
+import Header from '../components/Header'
 
 const IndexPage = () => {
   return (
-    <div>
-      Segun Owoeye LP
-    </div>
+    <main>
+      <Header />
+    </main>
   )
 }
 

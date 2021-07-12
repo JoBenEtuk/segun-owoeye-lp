@@ -1,0 +1,32 @@
+.header {
+  background: black;
+  padding: 20px 0;
+  .header__left {
+    svg {
+    }
+  }
+  .header__right {
+    ul {
+      display: flex;
+      color: white;
+      li {
+        margin-right: 60px;
+        a {
+          position: relative;
+          &:hover {
+            color: #ffdf6d;
+            &::after {
+              content: "";
+              position: absolute;
+              background-color: #ffdf6d;
+              width: 150%;
+              height: 5px;
+              right: -25%;
+              bottom: -15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
