@@ -1,0 +1,30 @@
+.service {
+  .service__header {
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #efffff;
+      height: 46px;
+      li {
+        margin-right: 10%;
+        margin-top: -40px;
+        z-index: 1;
+        text-align: center;
+        p {
+          color: #092323;
+          font-size: 1.125rem;
+        }
+        span {
+          color: white;
+          display: block;
+          font-size: 1rem;
+          margin-bottom: 20px;
+          svg {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+}
