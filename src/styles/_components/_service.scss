@@ -41,7 +41,6 @@
       ul {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
         grid-gap: 30px;
         max-width: 730px;
         width: 100%;
@@ -97,6 +96,20 @@
         font-size: 3rem;
         color: #0a0a0a;
         margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@include media("<=phone2x") {
+  .service {
+    .service__body {
+      .service__list {
+        ul {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
       }
     }
   }
