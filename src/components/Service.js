@@ -6,10 +6,12 @@ const Service = () => {
       {
       allContentfulHomePage {
         nodes {
-          email
-          phone
           workHours
           serviceTItle
+          aboutUs {
+            email
+            phoneNumber
+          }
           serviceItems {
             title
             description {
@@ -27,10 +29,11 @@ const Service = () => {
       }
     }
   `)
+
   const data = query.allContentfulHomePage.nodes[0]
 
   return (
-    <div className="service">
+    <section className="service" id="services">
       <div className="service__header">
         <ul>
           <li>
@@ -52,7 +55,7 @@ const Service = () => {
               </svg>
                             E-mail
                         </span>
-            <p>{data.email}</p>
+            <p>{data.aboutUs.email}</p>
           </li>
           <li>
             <span>
@@ -61,7 +64,7 @@ const Service = () => {
               </svg>
                             Phone
                         </span>
-            <p>{data.phone}</p>
+            <p>{data.aboutUs.phoneNumber}</p>
           </li>
         </ul>
       </div>
@@ -90,7 +93,7 @@ const Service = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

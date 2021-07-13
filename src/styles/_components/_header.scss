@@ -1,6 +1,10 @@
 .header {
   background: black;
   padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  width: 100%;
   .header__right {
     ul {
       display: flex;
