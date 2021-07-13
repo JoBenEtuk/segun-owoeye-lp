@@ -59,3 +59,8 @@ dl {
   height: 48px;
   border: none;
 }
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1200px;
+  }
+}
