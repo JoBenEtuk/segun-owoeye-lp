@@ -9,7 +9,7 @@
     top: -140px;
     box-shadow: 0 50px 300px -160px #051818;
     img {
-      width: 350px;
+      height: auto;
     }
     .about__main {
       background-color: $light-primary;
@@ -33,7 +33,7 @@
         p {
           font-size: 1rem;
           line-height: 150%;
-          margin-bottom: 30px;
+          margin-bottom: 50px;
         }
       }
     }
@@ -55,17 +55,9 @@
         }
       }
       .social-links {
-        text-align: right;
-        h5 {
-          font-weight: normal;
-          font-size: 0.875rem;
-          color: $white;
-        }
-        .social-links__item {
-          a {
-            margin-left: 10px;
-          }
-        }
+        display: flex;
+        align-items: center;
+        gap: 15px;
       }
     }
   }
