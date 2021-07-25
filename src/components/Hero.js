@@ -24,11 +24,18 @@ const Hero = () => {
   const data = query.allContentfulHomePage.nodes[0].introduction
 
   return (
-    <section className="home-hero" style={{ backgroundImage: `linear-gradient(rgba(10, 10, 10, 0.5) 100%, rgba(10, 10, 10, 0.5)100%), url(https:${data.backgroundImage.fluid.src})` }}>
+    <section className="home-hero" id="home">
       <div className="container">
-        <h1>{data.title}</h1>
-        <h3>{data.description.description}</h3>
-        <button className="btn-main">Schedule Appointment</button>
+        <div className="flex-ac-jb">
+          <div className="home-hero-left">
+            <h1>{data.title}</h1>
+            <h3>{data.description.description}</h3>
+            <button className="btn-main">Schedule Appointment</button>
+          </div>
+          <div className="home-hero-right">
+            <img src={data.backgroundImage.fluid.src} alt="" />
+          </div>
+        </div>
       </div>
     </section>
   )

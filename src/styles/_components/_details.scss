@@ -1,0 +1,25 @@
+.details {
+  background: $dark-primary-2;
+  height: 43px;
+  display: flex;
+  align-items: center;
+  margin-bottom: -1px;
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    span {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      color: $white;
+      gap: 10px;
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}

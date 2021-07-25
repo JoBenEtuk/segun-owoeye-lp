@@ -29,7 +29,6 @@ const About = () => {
       }
     `)
     const data = query.allContentfulHomePage.nodes[0].aboutUs;
-    console.log(data);
 
     return (
         <section className="about" id="about">

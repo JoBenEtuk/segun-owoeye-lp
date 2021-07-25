@@ -1,21 +1,34 @@
 .home-hero {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  color: white;
+  color: $white;
+  background: linear-gradient(90deg, #051818 0%, rgba(85, 128, 128, 0.66) 100%),
+    #051818;
   width: 100%;
   height: 700px;
-  text-align: center;
-  position: relative;
+  overflow: hidden;
+  &-left {
+    width: 55%;
+  }
+  &-right {
+    width: 45%;
+  }
+  .container {
+    position: relative;
+  }
   h1 {
     font-weight: bold;
     font-size: 4rem;
     padding-top: 15%;
   }
   h3 {
+    font-family: "EffraCorp", sans-serif;
     font-weight: normal;
-    font-size: 1.5rem;
-    width: 80%;
-    margin: 30px auto 50px auto;
+    font-size: 1.125rem;
+    line-height: 150%;
+    margin-bottom: 20px;
+    width: 75%;
   }
+}
+
+.section {
+  overflow: hidden;
 }

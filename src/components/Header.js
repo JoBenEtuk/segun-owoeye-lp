@@ -1,6 +1,5 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { useStaticQuery, graphql } from "gatsby"
-import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 const Header = () => {
     const query = useStaticQuery(graphql`
@@ -21,7 +20,11 @@ const Header = () => {
     const links = [
         {
             title: 'Home',
-            url: '/'
+            url: '/#home'
+        },
+        {
+            title: 'About',
+            url: '/#about'
         },
         {
             title: 'Services',
@@ -32,14 +35,22 @@ const Header = () => {
             url: '/#team'
         },
         {
-            title: 'About',
-            url: '/#about'
-        },
-        {
             title: 'Contact',
             url: '/#contact'
         },
     ]
+
+    const [active, setActive] = useState(new Array(links.length).fill(false));
+    const handleActive = (position) => {
+        const updatedActive = active.map((item, index) =>
+            index === position ? true : false
+        );
+        setActive(updatedActive);
+    }
+
+    useEffect(() => {
+        setActive([true, false, false, false, false]);
+    }, [])
 
     return (
         <header className="header">
@@ -54,9 +65,9 @@ const Header = () => {
                     <ul>
                         {links.map((link, index) => (
                             <li key={index}>
-                                <AnchorLink to={link.url}>
+                                <a href={link.url} className={active[index] ? "active" : ""} onClick={() => handleActive(index)}>
                                     <span>{link.title}</span>
-                                </AnchorLink>
+                                </a>
                             </li>
 
                         ))}

@@ -1,47 +1,56 @@
 html,
 body {
-  font-family: "Sen", sans-serif;
-  font-weight: 500;
+  font-family: "EffraCorp", sans-serif;
   font-size: 1rem;
   color: $black;
+}
+
+@font-face {
+  font-family: "Mermaid";
+  src: local("Mermaid"), url("../fonts/Mermaid1001.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "EffraCorp-Bold";
+  src: local("EffraCorp-Bold"),
+    url("../fonts/EffraCorp-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "EffraCorp-BoldItalic";
+  src: local("EffraCorp-BoldItalic"),
+    url("../fonts/EffraCorp-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "EffraCorp-Italic";
+  src: local("EffraCorp-Italic"),
+    url("../fonts/EffraCorp-Italic.ttf") format("truetype");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "EffraCorp";
+  src: local("EffraCorp-Regular"),
+    url("../fonts/EffraCorp-Regular.ttf") format("truetype");
 }
 
 h1,
 h2,
 h3,
 h4 {
-  font-family: "Sen", sans-serif;
+  font-family: "Mermaid", sans-serif;
   font-weight: 800;
-  line-height: 120%;
-}
-h1 {
-  font-size: 5.5rem;
-  letter-spacing: 0.04rem;
-}
-h2 {
-  font-size: 3.75rem;
-  letter-spacing: 0.02rem;
-}
-h3 {
-  font-size: 2.625rem;
-  letter-spacing: 0.02rem;
-}
-h4 {
-  font-size: 2.625rem;
-  letter-spacing: 0.02rem;
-}
-h5 {
-  font-size: 1.25rem;
-  font-weight: 800;
-  letter-spacing: 0.02rem;
+  margin: 0;
 }
 
 p,
 li,
 span {
   margin: 0;
-  font-size: 1.125rem;
-  line-height: 150%;
   font-weight: normal;
   letter-spacing: 0.04rem;
 }

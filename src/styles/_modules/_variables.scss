@@ -1,19 +1,10 @@
-@function hexToRGB($hex) {
-  @return red($hex), green($hex), blue($hex);
-}
-
 /* SASS Variables */
 $black: #000;
-$white: #ffffff;
-$sunbeam-black: #0a0a0a;
-$sunbeam-yellow: #ffd540;
-$sunbeam-purple: #695be4;
-$sunbeam-orange: #ff9a02;
-$sunbeam-paragraph: #c9c9ca;
-$sunbeam-dark-card: #1d1d20;
-$sunbeam-second-dark-bg: #111013;
+$white: #fff;
+$dark-primary-2: #124646;
+$secondary: #ffdf6d;
 
-//Responsive Varaibles
+//Responsive Variables
 $breakpoints: (
   phone: 320px,
   phone2x: 480px,

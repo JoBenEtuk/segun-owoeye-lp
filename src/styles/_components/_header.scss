@@ -1,28 +1,48 @@
 .header {
-  background: black;
   padding: 20px 0;
   position: sticky;
   top: 0;
   z-index: 2;
   width: 100%;
+  background: linear-gradient(
+      90deg,
+      rgb(5, 24, 24) 0%,
+      rgba(85, 128, 128, 0.66) 100%
+    ),
+    #051818;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    top: 0;
+    left: 0;
+  }
+  .container {
+    position: relative;
+  }
   .header__right {
     ul {
       display: flex;
-      color: white;
+      color: $white;
+      gap: 60px;
       li {
-        margin-right: 60px;
+        font-family: "Mermaid", sans-serif;
+        font-size: 1.125rem;
         a {
           position: relative;
-          &:hover {
-            color: #ffdf6d;
+          &:hover,
+          &.active {
+            color: $secondary;
             &::after {
               content: "";
               position: absolute;
-              background-color: #ffdf6d;
-              width: 150%;
-              height: 5px;
-              right: -25%;
-              bottom: -15px;
+              background-color: $secondary;
+              width: 100%;
+              height: 4px;
+              right: 0;
+              bottom: -20px;
             }
           }
         }
