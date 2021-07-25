@@ -30,6 +30,13 @@
   }
 }
 
-.section {
-  overflow: hidden;
+@include media("<=tablet2x") {
+  .home-hero {
+    &-left {
+      width: 100%;
+    }
+    &-right {
+      display: none;
+    }
+  }
 }
