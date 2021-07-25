@@ -1,14 +1,30 @@
 .service {
   position: relative;
   top: 270px;
+  margin-bottom: 300px;
   &__body {
-    margin-top: 70px;
+    margin-top: 80px;
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
     h3 {
-      text-align: center;
       font-weight: bold;
-      font-size: 3rem;
-      color: #0a0a0a;
-      margin-bottom: 20px;
+      font-size: 2.25rem;
+      color: $dark;
+      margin-bottom: 60px;
+      display: inline-block;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: $secondary;
+        width: 80%;
+        height: 4px;
+        right: 10%;
+        bottom: -15px;
+      }
     }
     .service__list {
       ul {
@@ -23,23 +39,17 @@
           padding: 20px;
           width: 100%;
           max-width: 350px;
-          height: 392px;
+          height: 355px;
           position: relative;
-          background: #fff7db;
-          border: 1px solid #ffdf6d;
-          &:nth-child(2),
-          &:nth-child(3) {
-            background: #efffff;
-            border: 1px solid #248c8c;
-          }
-          img {
-            margin-bottom: 10px;
+          border: 1px solid $dark-primary-2;
+          &:nth-child(2n) {
+            border: 1px solid $dark-secondary-2;
           }
           h4 {
             font-weight: bold;
             font-size: 1.5rem;
             color: #0a0a0a;
-            margin-bottom: 40px;
+            margin: 20px 0;
           }
           p {
             font-weight: normal;
@@ -62,12 +72,14 @@
       }
       button {
         margin-bottom: 80px;
+        font-family: "Mermaid", sans-serif;
+        font-weight: 700;
       }
       h1 {
         text-align: center;
         font-weight: bold;
         font-size: 3rem;
-        color: #0a0a0a;
+        color: $dark;
         margin-bottom: 20px;
       }
     }
