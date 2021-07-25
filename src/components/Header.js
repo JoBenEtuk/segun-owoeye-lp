@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, navigate } from "gatsby"
 
 const Header = () => {
     const query = useStaticQuery(graphql`
@@ -50,6 +50,7 @@ const Header = () => {
 
     useEffect(() => {
         setActive([true, false, false, false, false]);
+        navigate('/')
     }, [])
 
     return (

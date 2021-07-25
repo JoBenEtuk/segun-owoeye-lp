@@ -1,34 +1,7 @@
 .service {
-  .service__header {
-    ul {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #efffff;
-      height: 46px;
-      li {
-        margin-right: 10%;
-        margin-top: -40px;
-        z-index: 1;
-        text-align: center;
-        p {
-          color: #092323;
-          font-size: 1.125rem;
-        }
-        span {
-          color: white;
-          display: block;
-          font-size: 1rem;
-          margin-bottom: 20px;
-          svg {
-            margin-right: 10px;
-          }
-        }
-      }
-    }
-  }
-
-  .service__body {
+  position: relative;
+  top: 270px;
+  &__body {
     margin-top: 70px;
     h3 {
       text-align: center;
@@ -103,7 +76,7 @@
 
 @include media("<=phone2x") {
   .service {
-    .service__body {
+    &__body {
       .service__list {
         ul {
           display: flex;
