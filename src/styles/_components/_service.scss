@@ -39,7 +39,7 @@
           padding: 20px;
           width: 100%;
           max-width: 350px;
-          height: 355px;
+          min-height: 355px;
           position: relative;
           border: 1px solid $dark-primary-2;
           &:nth-child(2n) {

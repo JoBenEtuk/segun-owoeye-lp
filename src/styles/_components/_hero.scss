@@ -4,7 +4,7 @@
   background: linear-gradient(90deg, #051818 0%, rgba(85, 128, 128, 0.66) 100%),
     #051818;
   width: 100%;
-  height: 700px;
+  min-height: 700px;
   overflow: hidden;
   &-left {
     width: 55%;
@@ -37,6 +37,26 @@
     }
     &-right {
       display: none;
+    }
+  }
+}
+
+@include media("<=phone3x") {
+  .home-hero {
+    min-height: auto;
+    padding-bottom: 240px;
+    h1 {
+      padding-top: 10%;
+      font-size: 3rem;
+    }
+  }
+}
+
+@include media("<=phone2x") {
+  .home-hero {
+    h1 {
+      font-size: 2rem;
+      padding-top: 5%;
     }
   }
 }
