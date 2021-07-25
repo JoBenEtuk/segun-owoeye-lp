@@ -33,7 +33,7 @@ const Hero = () => {
             <button className="btn-main">Schedule Appointment</button>
           </div>
           <div className="home-hero-right">
-            <img src={data.backgroundImage.fluid.src} alt="" />
+            <img src={data.backgroundImage.fluid.src} alt="" width={751} height={546} />
           </div>
         </div>
       </div>

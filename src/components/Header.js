@@ -10,16 +10,23 @@ const Header = () => {
         allContentfulHomePage {
           nodes {
             logo {
-              fluid {
-                src
-              }
+                file {
+                url
+                }
+            }
+            aboutUs {
+                logoIcon {
+                    file {
+                        url
+                    }
+                }
             }
           }
         }
       }
     `)
-    const data = query.allContentfulHomePage.nodes[0].logo.fluid.src
-
+    const logotext = query.allContentfulHomePage.nodes[0].logo.file.url
+    const logo = query.allContentfulHomePage.nodes[0].aboutUs.logoIcon.file.url
     const links = [
         {
             title: 'Home',
@@ -62,15 +69,25 @@ const Header = () => {
                 <div className="container flex-ac-jb">
                     <div className="header__left">
                         <img
-                            src={`https:${data}`}
+                            src={`https:${logo}`}
                             alt="logo"
+                            width={37}
+                            height={32}
+                        />
+                        <img
+                            src={`https:${logotext}`}
+                            alt="logo"
+                            width={152}
+                            height={16}
                         />
                     </div>
                     <nav className="header__right">
                         <ul>
                             {links.map((link, index) => (
                                 <li key={index}>
-                                    <a href={link.url} className={active[index] ? "active" : ""} onClick={() => handleActive(index)}>
+                                    <a href={link.url}
+                                        className={active[index] ? "active" : ""}
+                                        onClick={() => handleActive(index)}>
                                         <span>{link.title}</span>
                                     </a>
                                 </li>
@@ -85,11 +102,21 @@ const Header = () => {
             {!isTablet && <header className="header mobile">
                 <div className="container">
                     <div className="header__top flex-ac-jb">
-                        <img
-                            src={`https:${data}`}
-                            alt="logo"
-                        />
-                        <svg onClick={() => { setOpen(true) }} xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <div>
+                            <img
+                                src={`https:${logo}`}
+                                alt="logo"
+                                width={37}
+                                height={32}
+                            />
+                            <img
+                                src={`https:${logotext}`}
+                                alt="logo"
+                                width={152}
+                                height={16}
+                            />
+                        </div>
+                        <svg role="presentation" onClick={() => { setOpen(true) }} xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
                     </div>
@@ -97,12 +124,12 @@ const Header = () => {
                     {open &&
                         <nav>
                             <div className="container">
-                                <svg onClick={() => { setOpen(false) }} xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <svg role="presentation" onClick={() => { setOpen(false) }} xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
                                 </svg>
                                 <ul>
                                     {links.map((link, index) => (
-                                        <li key={index} onClick={() => { setOpen(false) }}>
+                                        <li role="presentation" key={index} onClick={() => { setOpen(false) }}>
                                             <a href={link.url} className={active[index] ? "active" : ""} onClick={() => handleActive(index)}>
                                                 <span>{link.title}</span>
                                             </a>

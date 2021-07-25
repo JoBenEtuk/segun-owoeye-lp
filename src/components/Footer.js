@@ -17,8 +17,8 @@ const Footer = () => {
               disclaimer
             }
             logoIcon {
-                fluid {
-                    src
+                file {
+                    url
                 }
             }
           }
@@ -82,7 +82,7 @@ const Footer = () => {
                 </div>
 
                 <div className="footer__right">
-                    <img src={`https:${data.logoIcon.fluid.src}`} alt="logo" />
+                    <img src={`https:${data.logoIcon.file.url}`} alt="logo" />
                     <h3>Disclaimer</h3>
                     <p>{data.disclaimer.disclaimer}</p>
                 </div>

@@ -6,25 +6,19 @@ const Service = () => {
       {
       allContentfulHomePage {
         nodes {
-          workHours
           serviceTItle
-          aboutUs {
-            email
-            phoneNumber
-          }
           serviceItems {
             title
             description {
               description
             }
             icon {
-              fluid {
-                src
+              file {
+                url
               }
             }
           }
           serviceFoot
-          teamTitle
         }
       }
     }
@@ -41,7 +35,7 @@ const Service = () => {
             <ul>
               {data.serviceItems.map((item, index) => (
                 <li key={index}>
-                  <img src={`https:${item.icon.fluid.src}`} alt="icon" />
+                  <img src={`https:${item.icon.file.url}`} alt="icon" />
                   <h4>{item.title}</h4>
                   <p>{item.description.description}</p>
                 </li>

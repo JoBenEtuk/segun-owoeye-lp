@@ -29,13 +29,12 @@ const About = () => {
       }
     `)
     const data = query.allContentfulHomePage.nodes[0].aboutUs;
-    console.log(data)
 
     return (
         <section className="about" id="about">
             <div className="container">
                 <article>
-                    <img src={`https:${data.Image.fluid.src}`} alt="" />
+                    <img src={`https:${data.Image.fluid.src}`} alt="" width={350} height={419} />
                     <section className="about__main">
                         <div className="about__main__text">
                             <h3>{data.heading}</h3>
