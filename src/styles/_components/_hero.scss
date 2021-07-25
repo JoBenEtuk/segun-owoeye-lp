@@ -11,6 +11,12 @@
   }
   &-right {
     width: 45%;
+    position: absolute;
+    right: 2%;
+    img {
+      position: absolute;
+      right: -200px;
+    }
   }
   .container {
     position: relative;
@@ -54,6 +60,7 @@
 
 @include media("<=phone2x") {
   .home-hero {
+    padding-bottom: 70px;
     h1 {
       font-size: 2rem;
       padding-top: 5%;

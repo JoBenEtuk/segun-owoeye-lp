@@ -88,6 +88,8 @@
 
 @include media("<=phone2x") {
   .service {
+    top: unset;
+    margin-bottom: 50px;
     &__body {
       .service__list {
         ul {

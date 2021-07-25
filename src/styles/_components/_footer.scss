@@ -49,7 +49,7 @@
 
   .footer__right {
     text-align: right;
-    svg {
+    img {
       margin-bottom: 40px;
     }
     h3 {
@@ -68,6 +68,7 @@
   .footer {
     .container {
       grid-template-columns: 1fr;
+      gap: 25px;
     }
     .footer__left {
       .borderline {
@@ -76,7 +77,9 @@
     }
     .footer__right {
       text-align: left;
-      margin-top: 20px;
+      img {
+        margin-bottom: 20px;
+      }
     }
   }
 }

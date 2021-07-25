@@ -38,6 +38,8 @@
       }
     }
     footer {
+      gap: 20px;
+      flex-wrap: wrap;
       button {
         width: 145px;
         height: 47px;
@@ -75,6 +77,26 @@
       img {
         display: none;
       }
+    }
+  }
+}
+
+@include media("<=phone3x") {
+  .about {
+    article {
+      width: 90%;
+      right: 5%;
+    }
+  }
+}
+
+@include media("<=phone2x") {
+  .about {
+    article {
+      width: 100%;
+      right: unset;
+      top: unset;
+      position: relative;
     }
   }
 }
