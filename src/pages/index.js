@@ -6,7 +6,8 @@ import Hero from '../components/Hero'
 import Service from '../components/Service'
 import Footer from '../components/Footer'
 import About from '../components/About'
-import Team from '../components/Team'
+// import Team from '../components/Team'
+import Contact from '../components/Contact'
 
 const IndexPage = () => {
   return (
@@ -25,7 +26,8 @@ const IndexPage = () => {
       <Hero />
       <About />
       <Service />
-      <Team />
+      {/* <Team /> */}
+      <Contact />
       <Footer />
     </main>
   )
