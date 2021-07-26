@@ -83,7 +83,7 @@ const Footer = () => {
 
                 <div className="footer__right">
                     <img src={`https:${data.logoIcon.file.url}`} alt="logo" />
-                    <h3>Disclaimer</h3>
+                    <h4>Disclaimer</h4>
                     <p>{data.disclaimer.disclaimer}</p>
                 </div>
             </div>

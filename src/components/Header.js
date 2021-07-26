@@ -25,8 +25,10 @@ const Header = () => {
         }
       }
     `)
+
     const logotext = query.allContentfulHomePage.nodes[0].logo.file.url
     const logo = query.allContentfulHomePage.nodes[0].aboutUs.logoIcon.file.url
+
     const links = [
         {
             title: 'Home',
@@ -49,6 +51,11 @@ const Header = () => {
             url: '/#contact'
         },
     ]
+
+    const svg = {
+        width: "2rem",
+        cursor: "pointer"
+    };
 
     const [active, setActive] = useState(new Array(links.length).fill(false));
     const handleActive = (position) => {
@@ -116,7 +123,11 @@ const Header = () => {
                                 height={16}
                             />
                         </div>
-                        <svg role="presentation" onClick={() => { setOpen(true) }} xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg
+                            style={svg}
+                            role="presentation"
+                            onClick={() => { setOpen(true) }}
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#fff">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
                     </div>
@@ -124,7 +135,11 @@ const Header = () => {
                     {open &&
                         <nav>
                             <div className="container">
-                                <svg role="presentation" onClick={() => { setOpen(false) }} xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <svg
+                                    style={svg}
+                                    role="presentation"
+                                    onClick={() => { setOpen(false) }}
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#fff">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
                                 </svg>
                                 <ul>
