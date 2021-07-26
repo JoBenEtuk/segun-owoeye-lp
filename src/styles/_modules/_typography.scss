@@ -11,28 +11,6 @@ body {
 }
 
 @font-face {
-  font-family: "EffraCorp-Bold";
-  src: local("EffraCorp-Bold"),
-    url("../fonts/EffraCorp-Bold.ttf") format("truetype");
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: "EffraCorp-BoldItalic";
-  src: local("EffraCorp-BoldItalic"),
-    url("../fonts/EffraCorp-BoldItalic.ttf") format("truetype");
-  font-weight: bold;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "EffraCorp-Italic";
-  src: local("EffraCorp-Italic"),
-    url("../fonts/EffraCorp-Italic.ttf") format("truetype");
-  font-style: italic;
-}
-
-@font-face {
   font-family: "EffraCorp";
   src: local("EffraCorp-Regular"),
     url("../fonts/EffraCorp-Regular.ttf") format("truetype");

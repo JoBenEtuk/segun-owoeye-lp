@@ -8,7 +8,7 @@ const Hero = () => {
         nodes {
           introduction {
             backgroundImage {
-              fluid {
+              fluid(toFormat: WEBP) {
                 src
               }
             }
