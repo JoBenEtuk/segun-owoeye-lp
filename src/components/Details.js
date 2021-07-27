@@ -1,5 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql } from "gatsby"
+import { motion } from "framer-motion"
 
 const Details = () => {
     const query = useStaticQuery(graphql`
@@ -21,7 +22,11 @@ const Details = () => {
     const data = query.allContentfulHomePage.nodes[0].aboutUs;
 
     return (
-        <aside className="details">
+        <motion.aside
+            initial={{ y: -100 }}
+            animate={{ y: 0 }}
+            transition={{ type: "tween", delay: 0.2, duration: 1 }}
+            className="details">
             <section className="container flex-ac-jb">
                 <address className="details__left">
                     <span>
@@ -84,7 +89,7 @@ const Details = () => {
                     </a>
                 </nav>
             </section>
-        </aside>
+        </motion.aside>
     )
 }
 

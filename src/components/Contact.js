@@ -1,4 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
+import { motion } from "framer-motion"
+import { useOnScreen } from "../hooks"
 
 const Contact = () => {
     const [form, setForm] = useState({
@@ -23,8 +25,18 @@ const Contact = () => {
         console.log("submitted")
     }
 
+    //  FRAMER ANIMATIONS
+    const ref = useRef()
+    const inView = useOnScreen(ref);
+
     return (
-        <section className="contact" id="contact">
+        <motion.section
+            ref={ref}
+            initial={{ opacity: 0, x: "-90vw" }}
+            animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : "-90vw" }}
+            transition={{ type: "tween", duration: 1 }}
+            className="contact"
+            id="contact">
             <div className="container">
                 <aside>
                     <h3>Book an appointment with us, we’ll be glad to meet you.</h3>
@@ -89,11 +101,15 @@ const Contact = () => {
                                 rows="4" />
                         </div>
 
-                        <button className="btn-main" type="submit">Schedule Appointment</button>
+                        <motion.button
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                            className="btn-main"
+                            type="submit">Schedule Appointment</motion.button>
                     </div>
                 </form>
             </div>
-        </section>
+        </motion.section>
     )
 }
 

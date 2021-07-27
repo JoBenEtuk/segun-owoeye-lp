@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { useStaticQuery, graphql } from "gatsby"
+import { motion } from "framer-motion"
+import { useOnScreen } from "../hooks"
 
 const About = () => {
     const query = useStaticQuery(graphql`
@@ -30,8 +32,18 @@ const About = () => {
     `)
     const data = query.allContentfulHomePage.nodes[0].aboutUs;
 
+    //  FRAMER ANIMATIONS
+    const ref = useRef()
+    const inView = useOnScreen(ref);
+
     return (
-        <section className="about" id="about">
+        <motion.section
+            ref={ref}
+            initial={{ opacity: 0, x: "-90vw" }}
+            animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : "-90vw" }}
+            transition={{ type: "tween", duration: 1 }}
+            className="about"
+            id="about">
             <div className="container">
                 <article>
                     <img src={`https:${data.Image.fluid.src}`} alt="" width={350} height={419} />
@@ -73,17 +85,19 @@ const About = () => {
                                 </a>
                             </div>
 
-                            <button>
+                            <motion.button
+                                whileHover={{ scale: 1.1 }}
+                                whileTap={{ scale: 0.9 }}>
                                 Read More
                                 <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M1 13L7 7L1 1" stroke="#5b4700" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
-                            </button>
+                            </motion.button>
                         </footer>
                     </section>
                 </article>
             </div>
-        </section>
+        </motion.section>
     )
 }
 

@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { useRef } from 'react'
+import { motion } from "framer-motion"
 import { useStaticQuery, graphql } from "gatsby"
+import { useOnScreen } from "../hooks"
 
 const Footer = () => {
     const query = useStaticQuery(graphql`
@@ -29,8 +31,17 @@ const Footer = () => {
 
     const data = query.allContentfulHomePage.nodes[0].aboutUs;
 
+    //  FRAMER ANIMATIONS
+    const ref = useRef()
+    const inView = useOnScreen(ref);
+
     return (
-        <footer className="footer">
+        <motion.footer
+            className="footer"
+            ref={ref}
+            initial={{ opacity: 0, x: "90vw" }}
+            animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : "90vw" }}
+            transition={{ duration: 1 }}>
             <div className="container">
                 <div className="footer__left">
                     <h3>Contact us</h3>
@@ -87,7 +98,7 @@ const Footer = () => {
                     <p>{data.disclaimer.disclaimer}</p>
                 </div>
             </div>
-        </footer>
+        </motion.footer>
     )
 }
 
