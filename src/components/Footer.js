@@ -39,8 +39,8 @@ const Footer = () => {
         <motion.footer
             className="footer"
             ref={ref}
-            initial={{ opacity: 0, x: "90vw" }}
-            animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : "90vw" }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: inView ? 1 : 0 }}
             transition={{ duration: 1 }}>
             <div className="container">
                 <div className="footer__left">

@@ -32,8 +32,8 @@ const Contact = () => {
     return (
         <motion.section
             ref={ref}
-            initial={{ opacity: 0, x: "-90vw" }}
-            animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : "-90vw" }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: inView ? 1 : 0 }}
             transition={{ type: "tween", duration: 1 }}
             className="contact"
             id="contact">

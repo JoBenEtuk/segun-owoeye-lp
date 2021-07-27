@@ -37,8 +37,8 @@ const Service = () => {
       className="service"
       id="services"
       ref={ref}
-      initial={{ opacity: 0, x: "90vw" }}
-      animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : "90vw" }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: inView ? 1 : 0 }}
       transition={{ duration: 1 }}>
       <div className="service__body">
         <div className="container">
@@ -49,6 +49,7 @@ const Service = () => {
                 <motion.li
                   key={index}
                   whileHover={{ scale: 1.1 }}
+                  transition={{ duration: 0.4 }}
                   whileTap={{ scale: 0.9 }}>
                   <img src={`https:${item.icon.file.url}`} alt="icon" />
                   <h4>{item.title}</h4>

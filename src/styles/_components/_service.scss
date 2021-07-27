@@ -86,11 +86,20 @@
   }
 }
 
+@include media("<=tablet2x") {
+  .service {
+    &__body {
+      margin-top: 150px;
+    }
+  }
+}
+
 @include media("<=phone2x") {
   .service {
     top: unset;
     margin-bottom: 50px;
     &__body {
+      margin-top: 80px;
       .service__list {
         ul {
           display: flex;

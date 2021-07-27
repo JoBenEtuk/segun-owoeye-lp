@@ -38,6 +38,10 @@
 
 @include media("<=tablet2x") {
   .home-hero {
+    min-height: 650px;
+    h1 {
+      padding-top: 12%;
+    }
     &-left {
       width: 100%;
     }
