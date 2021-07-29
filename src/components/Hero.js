@@ -36,7 +36,7 @@ const Hero = () => {
         ref={ref}
         initial={{ opacity: 0 }}
         animate={{ opacity: inView ? 1 : 0 }}
-        transition={{ type: "tween", delay: 0.2, duration: 1 }}>
+        transition={{ type: "tween", delay: 0.2, duration: 0.8 }}>
         <div className="flex-ac-jb">
           <div className="home-hero-left">
             <h1>{data.title}</h1>

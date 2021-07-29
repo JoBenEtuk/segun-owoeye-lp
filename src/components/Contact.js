@@ -34,7 +34,7 @@ const Contact = () => {
             ref={ref}
             initial={{ opacity: 0 }}
             animate={{ opacity: inView ? 1 : 0 }}
-            transition={{ type: "tween", duration: 1 }}
+            transition={{ type: "tween", duration: 0.8 }}
             className="contact"
             id="contact">
             <div className="container">

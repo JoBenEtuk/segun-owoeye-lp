@@ -71,6 +71,16 @@ const Header = () => {
         navigate('/')
     }, [])
 
+    const navVariant = {
+        hidden: {
+            scale: 0,
+            transition: { duration: 0.2 }
+        },
+        visible: {
+            scale: 1,
+            transition: { type: "tween" }
+        }
+    }
 
     return (
         <>
@@ -118,8 +128,7 @@ const Header = () => {
             {!isTablet && <motion.header
                 className="header mobile"
                 initial={{ opacity: 0.5 }}
-                animate={{ opacity: 1 }}
-                transition={{ type: "tween", delay: 0.1 }}>
+                animate={{ opacity: 1 }}>
                 <div className="container">
                     <div className="header__top flex-ac-jb">
                         <div>
@@ -147,10 +156,10 @@ const Header = () => {
                     <AnimatePresence>
                         {open &&
                             <motion.nav
-                                initial={{ scale: 0 }}
-                                animate={{ scale: 1 }}
-                                exit={{ scale: 0 }}
-                                transition={{ type: "tween" }}>
+                                variants={navVariant}
+                                initial='hidden'
+                                animate="visible"
+                                exit='hidden'>
                                 <div className="container">
                                     <svg
                                         style={svg}
@@ -162,11 +171,10 @@ const Header = () => {
                                     <ul>
                                         {links.map((link, index) => (
                                             <motion.li
-                                                whileHover={{ scale: 1.1 }}
                                                 whileTap={{ scale: 0.9 }}
-                                                initial={{ opacity: 0 }}
-                                                animate={{ opacity: 1 }}
-                                                transition={{ delay: `${index / 4}`, type: "spring" }}
+                                                initial={{ scale: 0 }}
+                                                animate={{ scale: 1 }}
+                                                transition={{ delay: `${index / 4}` }}
                                                 role="presentation"
                                                 key={index}
                                                 onClick={() => { setOpen(false) }}>

@@ -41,7 +41,7 @@ const About = () => {
             ref={ref}
             initial={{ opacity: 0, x: "-90vw" }}
             animate={{ opacity: inView ? 1 : 0, x: 0 }}
-            transition={{ type: "tween", duration: 1 }}
+            transition={{ type: "tween", duration: 0.8 }}
             className="about"
             id="about">
             <div className="container">

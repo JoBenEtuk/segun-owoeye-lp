@@ -39,7 +39,7 @@ const Service = () => {
       ref={ref}
       initial={{ opacity: 0 }}
       animate={{ opacity: inView ? 1 : 0 }}
-      transition={{ duration: 1 }}>
+      transition={{ duration: 0.8 }}>
       <div className="service__body">
         <div className="container">
           <h3>{data.serviceTItle}</h3>

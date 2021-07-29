@@ -25,7 +25,7 @@ const Details = () => {
         <motion.aside
             initial={{ y: -100 }}
             animate={{ y: 0 }}
-            transition={{ type: "tween", delay: 0.2, duration: 1 }}
+            transition={{ type: "tween", delay: 0.2, duration: 0.5 }}
             className="details">
             <section className="container flex-ac-jb">
                 <address className="details__left">

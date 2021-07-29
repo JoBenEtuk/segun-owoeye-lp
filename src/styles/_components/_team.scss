@@ -1,6 +1,8 @@
 .home-team {
   background: $light-primary;
-  padding: 70px 0;
+  padding: 80px 0 100px 0;
+  overflow: hidden;
+  position: relative;
 
   &__header {
     text-align: center;
@@ -23,6 +25,11 @@
     }
   }
 
+  .container {
+    overflow: hidden;
+    padding-bottom: 50px;
+  }
+
   article {
     color: $white;
     position: relative;
@@ -38,12 +45,10 @@
       right: 0;
       bottom: 0;
     }
+
     &:hover,
     &:focus,
-    &:active,
-    &.active {
-      width: 413px !important;
-      height: 532px;
+    &:active {
       .text {
         display: none;
       }
@@ -77,7 +82,7 @@
       display: none;
       flex-direction: column;
       justify-content: space-between;
-      padding: 40px 20px;
+      padding: 20px;
       z-index: 1;
       position: absolute;
       width: 100%;
@@ -86,7 +91,7 @@
       top: 0;
       header {
         h2 {
-          font-size: 2.25rem;
+          font-size: 2rem;
           color: $secondary;
         }
         h3 {
@@ -96,7 +101,7 @@
         }
       }
       p {
-        font-size: 1rem;
+        font-size: 0.9rem;
         line-height: 150%;
       }
       .social-links {
@@ -109,12 +114,18 @@
     padding: 0 20px;
   }
 
+  .slick-slider {
+    position: unset;
+  }
+
   .slick-next,
   .slick-prev {
     z-index: 2;
   }
 
   .slick-dots {
+    bottom: 8%;
+    right: 0;
     li {
       button {
         &::before {
@@ -132,6 +143,56 @@
       }
     }
   }
+
+  .slick-list {
+    overflow: unset;
+  }
+}
+
+@include media("<=991px") {
+  .home-team {
+    article {
+      .main-content {
+        header {
+          h2 {
+            font-size: 1.875rem;
+          }
+          h3 {
+            font-size: 1rem;
+          }
+        }
+        p {
+          font-size: 0.75rem;
+        }
+      }
+    }
+  }
+}
+
+@include media("<=phone3x") {
+  .home-team {
+    padding: 50px 0 80px 0;
+    &__header {
+      margin-bottom: 90px;
+    }
+    article {
+      .main-content {
+        header {
+          margin-bottom: 5px;
+          h2 {
+            font-size: 1.5rem;
+          }
+          h3 {
+            font-size: 0.875rem;
+          }
+        }
+        p {
+          font-size: 0.5rem;
+          line-height: 145%;
+        }
+      }
+    }
+  }
 }
 
 @include media("<=phone2x") {
@@ -143,14 +204,74 @@
         font-size: 1.5rem;
       }
     }
-    .slick-prev {
-      left: -1%;
+
+    article {
+      .main-content {
+        header {
+          h2 {
+            font-size: 2.5rem;
+          }
+          h3 {
+            font-size: 1.5rem;
+          }
+        }
+        p {
+          font-size: 1rem;
+          line-height: 150%;
+        }
+      }
     }
-    .slick-next {
-      right: -1%;
-    }
+
     .slick-slide {
       padding: 0 20px;
+    }
+  }
+}
+
+@include media("<=450px") {
+  .home-team {
+    article {
+      .main-content {
+        p {
+          font-size: 0.875rem;
+        }
+      }
+    }
+  }
+}
+
+@include media("<=400px") {
+  .home-team {
+    article {
+      .main-content {
+        p {
+          font-size: 0.75rem;
+        }
+      }
+    }
+  }
+}
+
+@include media("<=370px") {
+  .home-team {
+    article {
+      .main-content {
+        p {
+          font-size: 0.65rem;
+        }
+      }
+    }
+  }
+}
+
+@include media("<=340px") {
+  .home-team {
+    article {
+      .main-content {
+        p {
+          font-size: 0.6rem;
+        }
+      }
     }
   }
 }
