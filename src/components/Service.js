@@ -49,7 +49,7 @@ const Service = () => {
                 <motion.li
                   key={index}
                   whileHover={{ scale: 1.1 }}
-                  transition={{ duration: 0.4 }}
+                  transition={{ duration: 0.2 }}
                   whileTap={{ scale: 0.9 }}>
                   <img src={`https:${item.icon.file.url}`} alt="icon" />
                   <h4>{item.title}</h4>
@@ -59,10 +59,7 @@ const Service = () => {
             </ul>
             <footer>{data.serviceFoot}</footer>
             <div className="flex-ac-jc">
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                className="btn-main">Schedule Appointment</motion.button>
+              <button className="btn-main">Schedule Appointment</button>
             </div>
           </div>
         </div>

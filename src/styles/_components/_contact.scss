@@ -1,5 +1,5 @@
 .contact {
-  padding: 50px 16%;
+  padding: 80px 16%;
   .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -54,7 +54,7 @@
 
 @include media("<=tablet2x") {
   .contact {
-    padding: 50px 10%;
+    padding: 60px 10%;
     .container {
       grid-template-columns: 1fr;
     }

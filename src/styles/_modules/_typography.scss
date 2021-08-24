@@ -30,7 +30,6 @@ li,
 span {
   margin: 0;
   font-weight: normal;
-  letter-spacing: 0.04rem;
 }
 
 @include media(">tablet2x", "<=desktop2x") {

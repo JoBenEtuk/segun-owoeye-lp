@@ -101,11 +101,9 @@ const Contact = () => {
                                 rows="4" />
                         </div>
 
-                        <motion.button
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.9 }}
+                        <button
                             className="btn-main"
-                            type="submit">Schedule Appointment</motion.button>
+                            type="submit">Schedule Appointment</button>
                     </div>
                 </form>
             </div>

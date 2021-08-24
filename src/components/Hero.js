@@ -41,10 +41,7 @@ const Hero = () => {
           <div className="home-hero-left">
             <h1>{data.title}</h1>
             <h3>{data.description.description}</h3>
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              className="btn-main">Schedule Appointment</motion.button>
+            <button className="btn-main">Schedule Appointment</button>
           </div>
           <div className="home-hero-right">
             <img src={data.backgroundImage.fluid.src} alt="" width={751} height={546} />

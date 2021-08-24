@@ -67,7 +67,6 @@ const Header = () => {
     }
 
     useEffect(() => {
-        setActive([true, false, false, false, false]);
         navigate('/')
     }, [])
 
@@ -107,16 +106,14 @@ const Header = () => {
                     <nav className="header__right">
                         <ul>
                             {links.map((link, index) => (
-                                <motion.li
-                                    key={index}
-                                    whileHover={{ scale: 1.1 }}
-                                    whileTap={{ scale: 0.9 }}>
+                                <li
+                                    key={index}>
                                     <a href={link.url}
                                         className={active[index] ? "active" : ""}
                                         onClick={() => handleActive(index)}>
                                         <span>{link.title}</span>
                                     </a>
-                                </motion.li>
+                                </li>
 
                             ))}
                         </ul>
